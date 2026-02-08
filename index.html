@@ -1,30 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Controle Financeiro</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Controle Financeiro</h1>
-        <div class="summary">
-            <div>Total: <span id="total">R$0,00</span></div>
-            <div>Gasto: <span id="spent">R$0,00</span></div>
-            <div>Líquido: <span id="net">R$0,00</span></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Controle</title>
+    <!-- IMPORTANDO ICONS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Sistema de Controle</h1>
+      </header>
+      <div class="container">
+        <div>
+          Valor Bruto: R$
+          <span class="entrada">0.00</span>
         </div>
-        <form id="transaction-form">
-            <input type="text" id="description" placeholder="Descrição do Produto" required>
-            <input type="number" id="amount" placeholder="Valor" required>
-            <select id="type">
-                <option value="entrada">Entrada</option>
-                <option value="saida">Saída</option>
-            </select>
-            <button type="submit">Adicionar</button>
-        </form>
-        <ul id="transaction-list"></ul>
-    </div>
-    <script src="scripts.js"></script>
-</body>
+
+        <div>
+          Valor Gasto: R$
+          <span class="saida">0.00</span>
+        </div>
+
+        <div>
+          Valor Líquido: R$
+          <span class="total">0.00</span>
+        </div>
+      </div>
+
+      <div class="novo-item">
+        <div class="descricao">
+          <label for="desc">Descrição</label>
+          <input
+            type="text"
+            id="desc"
+            placeholder="ex: Dia 2 Ganhos, ou Gasolina"
+          />
+        </div>
+
+        <div class="valor">
+          <label for="val">Valor R$</label>
+          <input type="number" id="val" placeholder="ex: 150.90" />
+        </div>
+
+        <div class="tipo">
+          <label for="tip">Escolha o Tipo</label>
+          <select id="tip">
+            <option>Entrada</option>
+            <option>Saída</option>
+          </select>
+        </div>
+        <button id="btn-incluir">Incluir</button>
+      </div>
+
+      <div class="tabela">
+        <table>
+          <thead>
+            <tr>
+              <th>Descrição</th>
+              <th class="tabela-valor">Valor</th>
+              <th class="tabela-tipo">Tipo</th>
+              <th class="tabela-acao"></th>
+            </tr>
+          </thead>
+
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>
