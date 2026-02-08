@@ -28,8 +28,13 @@ body {
 }
 
 .header h1 {
-  font-size: 2em;
+  font-size: 1.7em;
   margin-bottom: 10px;
+}
+
+.header h1 img {
+  width: 45px;
+
 }
 
 .summary {
@@ -84,6 +89,7 @@ body {
   color: #333;
   margin-bottom: 20px;
   font-size: 1.3em;
+  text-align: center;
 }
 
 .form-group {
@@ -143,6 +149,7 @@ button:hover {
   color: #333;
   margin-bottom: 20px;
   font-size: 1.3em;
+  text-align: center;
 }
 
 .transaction-list {
