@@ -1,31 +1,34 @@
         let transactions = [];
         let editingId = null;
 
-        // Carregar dados do storage ao iniciar
-        async function loadTransactions() {
+        // Carregar dados do localStorage ao iniciar
+        function loadTransactions() {
             try {
-                const result = await window.storage.get('transactions');
-                if (result && result.value) {
-                    transactions = JSON.parse(result.value);
+                const saved = localStorage.getItem('financialTransactions');
+                if (saved) {
+                    transactions = JSON.parse(saved);
                     renderTransactions();
                     updateSummary();
+                    console.log('Dados carregados:', transactions.length, 'transações');
                 }
             } catch (error) {
-                console.log('Nenhum dado anterior encontrado');
+                console.error('Erro ao carregar dados:', error);
             }
         }
 
-        // Salvar dados no storage
-        async function saveTransactions() {
+        // Salvar dados no localStorage
+        function saveTransactions() {
             try {
-                await window.storage.set('transactions', JSON.stringify(transactions));
+                localStorage.setItem('financialTransactions', JSON.stringify(transactions));
+                console.log('Dados salvos:', transactions.length, 'transações');
             } catch (error) {
                 console.error('Erro ao salvar:', error);
+                alert('Erro ao salvar os dados. Verifique se o localStorage está habilitado.');
             }
         }
 
         // Adicionar transação
-        document.getElementById('transactionForm').addEventListener('submit', async function(e) {
+        document.getElementById('transactionForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
             const descricao = document.getElementById('descricao').value;
@@ -41,7 +44,7 @@
             };
 
             transactions.unshift(transaction);
-            await saveTransactions();
+            saveTransactions();
             renderTransactions();
             updateSummary();
 
@@ -62,7 +65,7 @@
         }
 
         // Salvar edição
-        async function saveEdit(id) {
+        function saveEdit(id) {
             const descricao = document.getElementById(`edit-desc-${id}`).value;
             const valor = parseFloat(document.getElementById(`edit-valor-${id}`).value);
             const tipo = document.getElementById(`edit-tipo-${id}`).value;
@@ -75,7 +78,7 @@
                     valor,
                     tipo
                 };
-                await saveTransactions();
+                saveTransactions();
                 editingId = null;
                 renderTransactions();
                 updateSummary();
@@ -83,10 +86,10 @@
         }
 
         // Deletar transação
-        async function deleteTransaction(id) {
+        function deleteTransaction(id) {
             if (confirm('Tem certeza que deseja excluir esta transação?')) {
                 transactions = transactions.filter(t => t.id !== id);
-                await saveTransactions();
+                saveTransactions();
                 renderTransactions();
                 updateSummary();
             }
