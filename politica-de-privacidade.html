@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - Controle Financeiro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            margin: -20px -20px 30px -20px;
+            position: relative;
+        }
+
+        .back-button {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-button:hover {
+            background-color: white;
+            color: #667eea;
+            transform: translateY(-50%) translateX(-3px);
+        }
+
+        .back-button::before {
+            content: "←";
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .last-update {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 20px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            background-color: #f0f4ff;
+            padding: 15px;
+            border-left: 4px solid #667eea;
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 40px;
+        }
+
+        /* Botão de voltar fixo no rodapé (alternativa mobile) */
+        .back-button-footer {
+            display: none;
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 30px;
+            border-radius: 8px;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-button-footer:hover {
+            opacity: 0.9;
+        }
+
+        .back-button-footer::before {
+            content: "← ";
+            font-size: 18px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+                margin-top: 10px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            header {
+                margin: -15px -15px 20px -15px;
+                padding: 20px 15px;
+            }
+
+            .back-button {
+                position: static;
+                transform: none;
+                margin-bottom: 15px;
+                padding: 8px 16px;
+                font-size: 13px;
+            }
+
+            .back-button:hover {
+                transform: translateX(-3px);
+            }
+
+            /* Mostra botão no rodapé em mobile */
+            .back-button-footer {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="back-button" onclick="goBack()">Voltar</button>
+            <h1>Política de Privacidade</h1>
+            <p class="last-update">Aplicativo de Controle Financeiro</p>
+            <p class="last-update">Última atualização: 09/02/2026</p>
+        </header>
+
+        <section>
+            <h2>1. Introdução</h2>
+            <p>Esta Política de Privacidade descreve como o aplicativo de Controle Financeiro coleta, utiliza e protege as informações registradas pelos usuários. Nosso compromisso é garantir transparência e segurança no uso dos dados.</p>
+        </section>
+
+        <section>
+            <h2>2. Informações Coletadas</h2>
+            <p>O aplicativo não coleta nem armazena dados pessoais como nome, e-mail, telefone ou documentos de identificação. As únicas informações registradas são:</p>
+            <ul>
+                <li>Valores de gastos inseridos pelo usuário.</li>
+                <li>Campos de saldo positivo, negativo e líquido, calculados automaticamente pelo sistema.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Uso das Informações</h2>
+            <p>Os dados registrados têm como finalidade exclusiva:</p>
+            <ul>
+                <li>Permitir ao usuário acompanhar seus gastos.</li>
+                <li>Gerar relatórios internos de saldo positivo, negativo e líquido.</li>
+                <li>Auxiliar no controle financeiro pessoal.</li>
+            </ul>
+            <div class="highlight">
+                <strong>Não há compartilhamento, venda ou uso dos dados para fins de marketing ou publicidade.</strong>
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Armazenamento e Segurança</h2>
+            <ul>
+                <li>Os registros são armazenados localmente no dispositivo do usuário ou em banco de dados seguro vinculado ao aplicativo.</li>
+                <li>Não há coleta de informações que permitam identificar o usuário.</li>
+                <li>Medidas de segurança são aplicadas para evitar perda ou acesso não autorizado às informações financeiras.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Compartilhamento de Dados</h2>
+            <p>O aplicativo não compartilha dados com terceiros. Todas as informações permanecem restritas ao próprio usuário.</p>
+        </section>
+
+        <section>
+            <h2>6. Direitos do Usuário</h2>
+            <p>O usuário pode:</p>
+            <ul>
+                <li>Excluir manualmente seus registros a qualquer momento.</li>
+                <li>Desinstalar o aplicativo, o que remove todos os dados armazenados localmente.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>7. Alterações nesta Política</h2>
+            <p>Podemos atualizar esta Política de Privacidade periodicamente para refletir melhorias no aplicativo ou mudanças legais. A versão mais recente estará sempre disponível dentro do aplicativo.</p>
+        </section>
+
+        <section>
+            <h2>8. Contato</h2>
+            <p>Em caso de dúvidas sobre esta Política de Privacidade, o usuário pode entrar em contato pelo canal de suporte disponível no aplicativo.</p>
+        </section>
+
+        <button class="back-button-footer" onclick="goBack()">Voltar</button>
+
+        <footer>
+            <p>&copy; 2026 Controle Financeiro. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        function goBack() {
+            // Se houver histórico, volta para a página anterior
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                // Se não houver histórico (página aberta diretamente), redireciona para uma URL
+                // Substitua 'index.html' pela página inicial do seu app
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
+</body>
+</html>
