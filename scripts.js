@@ -144,8 +144,8 @@
                                     ${t.tipo === 'entrada' ? '+' : '-'} R$ ${t.valor.toFixed(2).replace('.', ',')}
                                 </div>
                                 <div class="action-buttons">
-                                    <button class="edit-btn" onclick="startEdit(${t.id})">Editar</button>
-                                    <button class="delete-btn" onclick="deleteTransaction(${t.id})">Excluir</button>
+                                    <button class="edit-btn" onclick="startEdit(${t.id})"><i class="fa-solid fa-pen-to-square" style="color: rgb(248, 194, 0);"></i></button>
+                                    <button class="delete-btn" onclick="deleteTransaction(${t.id})"><i class="fa-solid fa-trash-can" style="color: rgba(253, 0, 0, 1.00);"></i></button>
                                 </div>
                             </div>
                         </li>

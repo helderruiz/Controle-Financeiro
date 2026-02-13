@@ -21,7 +21,7 @@ body {
 }
 
 .header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #687fe2 0%, #0400e6 100%);
   color: white;
   padding: 30px;
   text-align: center;
@@ -34,7 +34,6 @@ body {
 
 .header h1 img {
   width: 45px;
-
 }
 
 .summary {
@@ -69,15 +68,15 @@ body {
 }
 
 .entrada .value {
-  color: #28a745;
+  color: #019624;
 }
 
 .saida .value {
-  color: #dc3545;
+  color: #b91828;
 }
 
 .liquido .value {
-  color: #667eea;
+  color: #0400e6;
 }
 
 .form-section {
@@ -128,7 +127,7 @@ select:focus {
 }
 
 button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #687fe2 0%, #0400e6 100%);
   color: white;
   border: none;
   cursor: pointer;
@@ -238,19 +237,21 @@ button:hover {
 }
 
 .edit-btn {
-  background: #ffc107;
+  background: transparent;
+  font-size: 20px;
 }
 
 .edit-btn:hover {
-  background: #e0a800;
+  /* background: #e0a800; */
 }
 
 .delete-btn {
-  background: #dc3545;
+  background: transparent;
+  font-size: 20px;
 }
 
 .delete-btn:hover {
-  background: #c82333;
+  /* background: #c82333; */
 }
 
 .save-btn {
