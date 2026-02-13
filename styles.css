@@ -309,6 +309,11 @@ footer {
   margin-top: 5px;
 }
 
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
 
 @media (max-width: 768px) {
   .container {
