@@ -6,7 +6,7 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #687fe2 0%, #0400e6 100%);
   min-height: 100vh;
   padding: 20px;
 }
@@ -219,8 +219,8 @@ button:hover {
 
 .action-buttons {
   display: flex;
-  gap: 10px;
-  margin-left: 15px;
+  /* gap: 0px; */
+  margin-left: 70px;
 }
 
 .edit-btn,
@@ -297,7 +297,7 @@ button:hover {
   opacity: 0.3;
 }
 
-footer a{
+footer {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -311,8 +311,12 @@ footer a{
 
 
 @media (max-width: 768px) {
+  .container {
+  border-radius: 0px 0px 20px 20px;
+  }
+
   body {
-    padding: 5px;
+    padding: 0px;
   }
 
   .header {
